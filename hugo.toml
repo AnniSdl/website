@@ -1,0 +1,63 @@
+# =====================================================================
+#  GRUNDEINSTELLUNGEN DER WEBSITE
+#  Hier stehen Dinge, die für die ganze Seite gelten.
+#  Ändern Sie nur Werte in Anführungszeichen "..." – nie die Namen davor.
+# =====================================================================
+
+# Die endgültige Adresse der Website.
+# (Für die Testseite bei GitHub wird sie automatisch ersetzt.)
+baseURL = "https://www.ann-kathrin-seidel.de/"
+
+title = "Ann-Kathrin Seidel"
+
+# Deutsch ist die Hauptsprache und liegt direkt unter der Adresse,
+# Englisch liegt unter /en/
+defaultContentLanguage = "de"
+defaultContentLanguageInSubdir = false
+
+# Funktionen, die wir nicht brauchen, sind ausgeschaltet
+disableKinds = ["taxonomy", "term", "rss"]
+
+# ---------------------------------------------------------------------
+#  SPRACHEN
+# ---------------------------------------------------------------------
+[languages]
+  [languages.de]
+    label = "Deutsch"
+    locale = "de-DE"
+    weight = 1
+  [languages.en]
+    label = "English"
+    locale = "en"
+    weight = 2
+
+# ---------------------------------------------------------------------
+#  IHRE ANGABEN  –  hier ändern Sie E-Mail-Adresse und Buchungslinks
+# ---------------------------------------------------------------------
+[params]
+  email = "info@ann-kathrin-seidel.de"
+
+  # Testversion: zeigt den Hinweisbalken und verbietet Suchmaschinen
+  # die Aufnahme. Für die Testseite bei GitHub wird das automatisch
+  # eingeschaltet – hier bitte "false" lassen.
+  testversion = false
+
+  # Buchungslinks zu pretix. Solange ein Link leer ist (""),
+  # erscheint statt des Knopfes der Hinweis "Buchung bald möglich".
+  [params.buchung]
+    beratung = ""
+    kurs = ""
+
+# ---------------------------------------------------------------------
+#  TECHNIK  –  bitte nicht ändern
+# ---------------------------------------------------------------------
+[markup.goldmark.renderer]
+  # Verhindert, dass versehentlich HTML-Code in Texte gerät
+  unsafe = false
+
+[sitemap]
+  changeFreq = "monthly"
+
+[markup.goldmark.renderHooks.link]
+  # Links wie [Text](/kurse) führen automatisch zur Seite in der richtigen Sprache
+  useEmbedded = "always"

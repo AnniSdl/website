@@ -1,0 +1,10 @@
+# Kurze Texte, die das Grundgerüst der Seite verwendet (Deutsch)
+skip = "Zum Inhalt springen"
+menu = "Hauptmenü"
+testbanner = "Testversion – diese Website ist im Aufbau."
+buchen_beratung = "Beratungstermin buchen"
+buchen_kurs = "Kursplatz buchen"
+buchen_bald = "Die Online-Buchung ist bald möglich. Bis dahin schreiben Sie mir gern eine E-Mail."
+notfound_title = "Seite nicht gefunden"
+notfound_text = "Diese Seite gibt es leider nicht (mehr)."
+notfound_link = "Zur Startseite"

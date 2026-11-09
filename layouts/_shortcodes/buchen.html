@@ -1,0 +1,11 @@
+{{- /*
+  Buchungsknopf. Verwendung im Text:  {{< buchen "beratung" >}}  oder  {{< buchen "kurs" >}}
+  Der Link selbst steht in hugo.toml unter [params.buchung].
+*/ -}}
+{{- $art := .Get 0 | default "beratung" }}
+{{- $link := index site.Params.buchung $art }}
+{{- if $link }}
+<p><a class="button" href="{{ $link }}" rel="noopener">{{ i18n (printf "buchen_%s" $art) }}</a></p>
+{{- else }}
+<p class="hinweis">{{ i18n "buchen_bald" }}</p>
+{{- end }}

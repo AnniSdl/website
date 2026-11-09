@@ -1,0 +1,11 @@
+{{- /*
+  E-Mail-Link mit vorausgefülltem Betreff.
+  Verwendung im Text:  {{< mail "Anfrage Beratung" >}}
+  Die Adresse steht in hugo.toml unter email. Sie wird immer auch
+  sichtbar ausgeschrieben, falls kein E-Mail-Programm eingerichtet ist.
+*/ -}}
+{{- $adresse := site.Params.email }}
+{{- $betreff := .Get 0 }}
+{{- $href := printf "mailto:%s" $adresse }}
+{{- with $betreff }}{{ $href = printf "%s?subject=%s" $href (replace (querify "x" .) "x=" "" | replaceRE `\+` "%20") }}{{ end -}}
+<a href="{{ $href | safeURL }}">{{ $adresse }}</a>

@@ -1,0 +1,67 @@
+# Baut die Website bei jeder Änderung und zeigt sie als Testseite
+# unter https://annisdl.github.io/website/ an.
+# Diese Datei müssen Sie normalerweise nie anfassen.
+
+name: Testseite bauen
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Nur die Rechte, die wirklich nötig sind
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  bauen:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: "0.169.0"
+      # Prüfsumme der offiziellen Hugo-Datei – schützt vor manipulierten Downloads
+      HUGO_SHA256: "2d2f0bfe357d8cb4cec02f6bb28a3bff34978c8dda44b618029c5eb9d66765a7"
+    steps:
+      - name: Hugo installieren und prüfen
+        run: |
+          curl -fsSL -o "${RUNNER_TEMP}/hugo.tar.gz" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.tar.gz"
+          echo "${HUGO_SHA256}  ${RUNNER_TEMP}/hugo.tar.gz" | sha256sum --check
+          tar -xzf "${RUNNER_TEMP}/hugo.tar.gz" -C "${RUNNER_TEMP}" hugo
+
+      - name: Projekt holen
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: GitHub Pages vorbereiten
+        id: pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+
+      - name: Website bauen (als Testversion)
+        env:
+          HUGO_PARAMS_TESTVERSION: "true"
+        run: |
+          "${RUNNER_TEMP}/hugo" --minify --gc \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: Ergebnis bereitstellen
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: ./public
+
+  veroeffentlichen:
+    needs: bauen
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Auf GitHub Pages veröffentlichen
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

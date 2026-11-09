@@ -1,0 +1,10 @@
+# Short texts used by the page framework (English)
+skip = "Skip to content"
+menu = "Main menu"
+testbanner = "Test version – this website is under construction."
+buchen_beratung = "Book a session"
+buchen_kurs = "Book a course place"
+buchen_bald = "Online booking will be available soon. Until then, feel free to send me an email."
+notfound_title = "Page not found"
+notfound_text = "Sorry, this page does not exist (anymore)."
+notfound_link = "Go to the home page"

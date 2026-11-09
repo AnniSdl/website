@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="{{ site.Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{- /* Sicherheitsregeln: keine fremden Inhalte, kein JavaScript, keine Formulare */}}
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  {{- if site.Params.testversion }}
+  <meta name="robots" content="noindex, nofollow">
+  {{- end }}
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+  {{- with .Description }}
+  <meta name="description" content="{{ . }}">
+  {{- end }}
+  {{- range .AllTranslations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+  {{- end }}
+  {{- $css := resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+</head>
+<body>
+  <a class="skip" href="#inhalt">{{ i18n "skip" }}</a>
+  {{- if site.Params.testversion }}
+  <div class="testbanner" role="note">{{ i18n "testbanner" }}</div>
+  {{- end }}
+  {{ partial "header.html" . }}
+  <main id="inhalt">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+</body>
+</html>

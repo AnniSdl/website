@@ -1,0 +1,13 @@
+{{- /* Link zur gleichen Seite in der anderen Sprache; gibt es sie nicht, zur Startseite */ -}}
+<ul class="sprachwahl">
+  {{- range hugo.Sites }}
+    {{- $lang := .Language.Lang }}
+    {{- if ne $lang site.Language.Lang }}
+      {{- $ziel := .Home.RelPermalink }}
+      {{- range $.Translations }}
+        {{- if eq .Language.Lang $lang }}{{ $ziel = .RelPermalink }}{{ end }}
+      {{- end }}
+  <li><a href="{{ $ziel }}" hreflang="{{ $lang }}" lang="{{ $lang }}">{{ .Language.Label }}</a></li>
+    {{- end }}
+  {{- end }}
+</ul>

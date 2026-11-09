@@ -1,0 +1,3 @@
+{{- /* Link zur deutschen Fassung dieser Seite. Verwendung: {{< deutsche-fassung "Impressum" >}} */ -}}
+{{- $text := .Get 0 | default "Deutsche Fassung" }}
+{{- range .Page.Translations }}{{ if eq .Language.Lang "de" }}<a href="{{ .RelPermalink }}" hreflang="de" lang="de">{{ $text }}</a>{{ end }}{{ end -}}
