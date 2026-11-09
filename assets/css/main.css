@@ -526,3 +526,7 @@ a:focus-visible, .button:focus-visible {
   width: 100%; aspect-ratio: 3 / 2; object-fit: cover;
   border-radius: var(--ecke) var(--ecke) var(--bogen) var(--ecke);
 }
+
+/* Unterseiten: erster Absatz als Einleitung, etwas größer */
+.content > p:first-child { font-size: 1.25rem; color: var(--text-weich); }
+.content li { margin-bottom: 0.4rem; }

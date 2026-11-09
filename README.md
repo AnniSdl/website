@@ -5,6 +5,8 @@
 
 Dieses Projekt enthält alle Texte und das Gerüst der Website. Bei jeder gespeicherten Änderung baut GitHub die Seite automatisch neu. Nach etwa zwei Minuten ist sie online.
 
+Alle Design-Entscheidungen (Farben, Schriften, Aufbau, Regeln für Texte) stehen in **[DESIGN.md](DESIGN.md)**.
+
 ---
 
 ## So ändern Sie einen Text
