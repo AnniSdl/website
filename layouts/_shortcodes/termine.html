@@ -1,0 +1,5 @@
+{{- /*
+  Zeigt die Kurstermine an. Verwendung im Text:  {{< termine >}}
+  Die Termine selbst stehen oben in der Datei unter "termine:".
+*/ -}}
+{{ partial "termine.html" .Page.Params.termine }}

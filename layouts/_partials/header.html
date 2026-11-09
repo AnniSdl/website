@@ -1,6 +1,9 @@
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="site-title" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+    <a class="site-title" href="{{ site.Home.RelPermalink }}">
+      <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M6 26C2 12 18 2 28 9s4 22-9 19S8 13 22 11" fill="none" stroke="#183f3b" stroke-width="1.6"/><circle cx="22" cy="11" r="2.6" fill="#c9957c"/></svg>
+      <span>{{ site.Title }}</span>
+    </a>
     <nav aria-label="{{ i18n "menu" }}">
       <ul class="menu">
         {{- $current := . }}
@@ -9,6 +12,10 @@
         {{- end }}
       </ul>
     </nav>
-    {{ partial "sprachwahl.html" . }}
+    <div class="kopf-rechts">
+      {{ partial "sprachwahl.html" . }}
+      {{- $ziel := site.Params.buchung.allgemein | default (printf "%s#termine" site.Home.RelPermalink) }}
+      <a class="button klein" href="{{ $ziel }}"{{ if hasPrefix $ziel "http" }} rel="noopener"{{ end }}>{{ i18n "buchen_kopf" }}</a>
+    </div>
   </div>
 </header>

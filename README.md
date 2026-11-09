@@ -22,11 +22,10 @@ Jede Seite gibt es zweimal: `.de.md` ist Deutsch, `.en.md` ist Englisch.
 
 | Datei | Seite |
 |---|---|
-| `_index.de.md` / `_index.en.md` | Startseite |
+| `_index.de.md` / `_index.en.md` | Startseite (alle Abschnitte inkl. Fragen und Kontakt – Texte stehen oben im Kopf der Datei) |
 | `beratung.de.md` / `.en.md` | Beratung (PRT) |
-| `kurse.de.md` / `.en.md` | Kurse (MBPM) – **hier stehen die Kurstermine** |
+| `kurse.de.md` / `.en.md` | Kurse (MBPM) – **hier stehen die Kurstermine** (oben im Kopf der Datei, erscheinen auch auf der Startseite) |
 | `ueber-mich.de.md` / `.en.md` | Über mich |
-| `kontakt.de.md` / `.en.md` | Kontakt |
 | `impressum.de.md` / `.en.md` | Impressum |
 | `datenschutz.de.md` / `.en.md` | Datenschutz |
 
@@ -58,14 +57,25 @@ Die Buchungslinks und die E-Mail-Adresse selbst stehen zentral in der Datei **`h
 
 ## Kurstermine aktualisieren (alle drei Monate)
 
-In `kurse.de.md` (und `kurse.en.md`) stehen die Termine zwischen den Markierungen
+In `kurse.de.md` (und `kurse.en.md`) stehen die Termine **oben im Kopf der Datei** unter `termine:`. Sie erscheinen automatisch auf der Kursseite und auf der Startseite.
 
 ```
-<!-- ===== KURSTERMINE: AB HIER ÄNDERN ===== -->
-<!-- ===== KURSTERMINE: BIS HIER ÄNDERN ===== -->
+termine:
+  - titel: "MBPM-Kurs Winter 2027 · Hannover"
+    datum: "27. Januar bis 17. März 2027"
+    zeit: "mittwochs, 19:00–21:30 Uhr"
+    ort: "Common Grounds Yoga, Hannover"
+    umfang: "8 Abende à 2,5 Stunden"
+    preis: "350 Euro"
 ```
 
-Kopieren Sie eine Terminzeile, ändern Sie Datum und Angaben, löschen Sie vergangene Termine. Die Markierungen selbst sind auf der Website unsichtbar.
+- **Neuer Termin:** einen ganzen Block ab `- titel:` kopieren, direkt darunter einfügen und anpassen.
+- **Vergangener Termin:** den ganzen Block löschen.
+- Die Leerzeichen am Zeilenanfang müssen genau so bleiben – sonst meldet GitHub einen Fehler (rotes Kreuz) und die alte Version bleibt online.
+
+## Fotos
+
+Fotos liegen im Ordner `assets/bilder/`. Die Website verkleinert sie beim Bauen automatisch. Neues Foto: hochladen (Ordner öffnen → „Add file“ → „Upload files“), dann den Dateinamen im Kopf der passenden Textdatei bei `datei:` eintragen und bei `alt:` kurz beschreiben, was zu sehen ist.
 
 ## Eine frühere Fassung wiederherstellen
 

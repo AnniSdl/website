@@ -1,0 +1,23 @@
+{{- /*
+  Liste der Kurstermine. Die Termine stehen im Kopf von
+  content/kurse.de.md (bzw. kurse.en.md) unter "termine:".
+  Aufruf: partial "termine.html" (Liste der Termine)
+*/ -}}
+{{- with . }}
+<ul class="termine">
+  {{- range . }}
+  <li class="termin">
+    <h3>{{ .titel }}</h3>
+    <dl>
+      {{- with .datum }}<div><dt>{{ i18n "termin_datum" }}</dt><dd>{{ . }}</dd></div>{{ end }}
+      {{- with .zeit }}<div><dt>{{ i18n "termin_zeit" }}</dt><dd>{{ . }}</dd></div>{{ end }}
+      {{- with .ort }}<div><dt>{{ i18n "termin_ort" }}</dt><dd>{{ . }}</dd></div>{{ end }}
+      {{- with .umfang }}<div><dt>{{ i18n "termin_umfang" }}</dt><dd>{{ . }}</dd></div>{{ end }}
+      {{- with .preis }}<div><dt>{{ i18n "termin_preis" }}</dt><dd>{{ . }}</dd></div>{{ end }}
+    </dl>
+  </li>
+  {{- end }}
+</ul>
+{{- else }}
+<p class="hinweis">{{ i18n "keine_termine" }}</p>
+{{- end }}

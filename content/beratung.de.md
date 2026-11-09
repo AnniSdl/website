@@ -6,6 +6,9 @@ menus:
   main:
     name: "Beratung (PRT)"
     weight: 2
+bild:
+  datei: "hand-wasser.jpg"
+  alt: "Eine Hand berührt im Sonnenlicht vorsichtig eine Wasseroberfläche und spiegelt sich darin."
 ---
 
 ## Was ist Pain Reprocessing Therapy?

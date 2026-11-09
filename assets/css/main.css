@@ -1,136 +1,487 @@
 /* =====================================================================
-   VORLÄUFIGES DESIGN – wird im Design-Schritt ersetzt.
-   Farben und Schriften stehen gesammelt hier oben.
+   DESIGN DER WEBSITE
+   Farben und Schriften stehen gesammelt hier oben in :root.
+   Wenn Sie eine Farbe ändern möchten, ändern Sie nur den Wert hinter
+   dem Doppelpunkt (z. B. #183f3b) – die Namen davor bitte nicht.
+   Alle Textfarben sind auf ausreichenden Kontrast geprüft (WCAG AA).
    ===================================================================== */
-:root {
-  --text: #1f2421;
-  --text-leise: #5a625d;
-  --hintergrund: #fbfaf7;
-  --flaeche: #f0eee8;
-  --akzent: #3d6b5a;
-  --akzent-text: #ffffff;
-  --linie: #dcd9d1;
-  --schrift: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --breite: 44rem;
+
+/* ---------- Schriften (liegen in static/fonts/, Lizenz: SIL OFL) ---------- */
+@font-face {
+  font-family: "Sofia Sans";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/sofia-sans-latin-400.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Sofia Sans";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/sofia-sans-latin-ext-400.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Sofia Sans";
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/sofia-sans-latin-600.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Sofia Sans";
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/sofia-sans-latin-ext-600.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Sofia Sans Semi Condensed";
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/sofia-sans-semi-condensed-latin-600.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Sofia Sans Semi Condensed";
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/sofia-sans-semi-condensed-latin-ext-600.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
-*, *::before, *::after { box-sizing: border-box; }
+/* ---------- Farben, Schriften, Maße ---------- */
+:root {
+  --waldgruen: #183f3b;    /* Knöpfe, Überschriften */
+  --tinte: #263c34;        /* Fließtext */
+  --text-weich: #3f5148;   /* Einleitungstexte */
+  --moos: #52645a;         /* leise Texte, kleine Überzeilen */
+  --leinen: #f7f4ee;       /* Grundfläche */
+  --papier: #fffdf8;       /* helle Schrift auf Grün */
+  --sand: #eee5d3;         /* Flächen (Kurse) */
+  --salbei-hell: #e3e9de;  /* Flächen (Beratung) */
+  --salbei: #b6bfae;       /* nur Linien und Formen, nie Text */
+  --ton: #c9957c;          /* nur Linien und Formen, nie Text */
+  --fokus: #a04729;        /* Rahmen bei Tastaturbedienung */
+  --linie: rgba(38, 60, 52, 0.14);
 
-html { -webkit-text-size-adjust: 100%; }
+  --schrift: "Sofia Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --schrift-titel: "Sofia Sans Semi Condensed", "Sofia Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+
+  --breite: 75rem;         /* größte Breite der Seite */
+  --textbreite: 42rem;     /* größte Breite von Fließtext */
+  --rand: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+/* ---------- Grundlagen ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; overflow-x: clip; }
 
 body {
   margin: 0;
   font-family: var(--schrift);
-  font-size: 1.0625rem;
-  line-height: 1.65;
-  color: var(--text);
-  background: var(--hintergrund);
+  font-size: 1.125rem;          /* 18 px */
+  line-height: 1.7;
+  color: var(--tinte);
+  background: var(--leinen);
 }
 
 .wrap {
   max-width: var(--breite);
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 var(--rand);
 }
 
-a { color: var(--akzent); text-underline-offset: 0.15em; }
+h1, h2, h3 {
+  font-family: var(--schrift-titel);
+  font-weight: 600;
+  color: var(--waldgruen);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+h1 { font-size: clamp(2.5rem, 5.5vw, 4.25rem); margin: 0 0 1.5rem; line-height: 1.04; }
+h2 { font-size: clamp(1.75rem, 3vw, 2.4rem); margin: 3rem 0 1rem; }
+h3 { font-size: 1.4rem; margin: 2rem 0 0.5rem; }
+p, ul, ol { margin: 0 0 1.1em; }
+strong { font-weight: 600; }
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--waldgruen); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
 a:hover { text-decoration-thickness: 2px; }
 a:focus-visible, .button:focus-visible {
-  outline: 3px solid var(--akzent);
-  outline-offset: 2px;
+  outline: 3px solid var(--fokus);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Kleine Überzeile über Überschriften */
+.ueberzeile {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--moos);
+  margin: 0 0 1rem;
 }
 
 /* Sprunglink für Tastatur- und Screenreader-Nutzung */
-.skip {
-  position: absolute;
-  left: -999px;
-}
+.skip { position: absolute; left: -999px; }
 .skip:focus {
-  left: 1rem;
-  top: 1rem;
-  background: var(--hintergrund);
-  padding: 0.5rem 1rem;
-  z-index: 10;
+  left: 1rem; top: 1rem; z-index: 10;
+  background: var(--papier); padding: 0.6rem 1.2rem;
 }
 
 .testbanner {
-  background: #fff3c4;
-  color: #4a3b00;
-  text-align: center;
-  padding: 0.4rem 1rem;
-  font-size: 0.9rem;
+  background: #fff3c4; color: #4a3b00;
+  text-align: center; padding: 0.4rem 1rem; font-size: 0.95rem;
   border-bottom: 1px solid #e6d58a;
 }
 
-/* Kopfbereich */
-.site-header {
-  border-bottom: 1px solid var(--linie);
-  padding: 1rem 0;
+/* ---------- Ecken ----------
+   Flächen und Fotos sind immer nur an EINER Ecke stark gerundet,
+   die anderen Ecken nur ganz leicht (wie im Prototyp). */
+:root {
+  --ecke: 4px;          /* leichte Rundung */
+  --bogen: 72px;        /* die eine große Rundung */
 }
+
+/* ---------- Knöpfe ---------- */
+.button {
+  display: inline-block;
+  background: var(--waldgruen);
+  color: var(--papier);
+  border: 2px solid var(--waldgruen);
+  border-radius: var(--ecke);
+  padding: 0.75rem 1.5rem;
+  font-family: var(--schrift);
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover { background: #2c554a; border-color: #2c554a; }
+.button.hell { background: transparent; color: var(--waldgruen); }
+.button.hell:hover { background: var(--salbei-hell); }
+.button.papier { background: var(--papier); color: var(--waldgruen); border-color: var(--papier); }
+.button.papier:hover { background: var(--sand); border-color: var(--sand); }
+.button.klein { padding: 0.5rem 1.1rem; font-size: 1rem; }
+.knoepfe { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; margin-top: 2rem; }
+.knoepfe > p { margin: 0; }
+
+.hinweis {
+  background: var(--sand);
+  border-radius: var(--ecke) 24px var(--ecke) var(--ecke);
+  padding: 1rem 1.25rem;
+}
+.leise { color: var(--moos); font-size: 1rem; }
+.einleitung { font-size: 1.2rem; color: var(--text-weich); }
+.einleitung p { margin: 0 0 1em; }
+.mehr { font-weight: 600; }
+
+/* ---------- Kopfbereich ---------- */
+.site-header { border-bottom: 1px solid var(--linie); background: var(--leinen); }
 .header-inner {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.5rem 1.5rem;
+  align-items: center;
+  gap: 0.5rem 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .site-title {
-  font-weight: 600;
-  font-size: 1.15rem;
-  color: var(--text);
-  text-decoration: none;
+  display: flex; align-items: center; gap: 0.7rem;
   margin-right: auto;
+  font-family: var(--schrift-titel);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--waldgruen);
+  text-decoration: none;
+  line-height: 1.1;
 }
+.site-title svg { width: 2.25rem; height: 2.25rem; flex: none; }
 .menu, .sprachwahl, .footer-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 1rem;
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 0 1.5rem;
 }
-.menu a, .sprachwahl a, .footer-links a { text-decoration: none; }
+.menu a, .sprachwahl a, .footer-links a {
+  display: inline-block;
+  padding: 0.55rem 0;              /* große Klickfläche */
+  color: var(--tinte);
+  text-decoration: none;
+}
+.menu a:hover, .footer-links a:hover, .sprachwahl a:hover { text-decoration: underline; }
 .menu a[aria-current="page"] {
   text-decoration: underline;
-  text-decoration-thickness: 2px;
+  text-decoration-color: var(--ton);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.45em;
 }
-.sprachwahl a { font-size: 0.9rem; color: var(--text-leise); }
+.kopf-rechts { display: flex; align-items: center; gap: 1.25rem; }
+.sprachwahl a { font-size: 1rem; color: var(--moos); }
 
-/* Inhalt */
-.content { padding-top: 2rem; padding-bottom: 3rem; }
-h1, h2, h3 { line-height: 1.25; }
-h1 { font-size: 2rem; margin-top: 0; }
-h2 { font-size: 1.4rem; margin-top: 2.25rem; }
-h3 { font-size: 1.15rem; }
-img { max-width: 100%; height: auto; }
+/* ---------- Abschnitte mit Farbfläche über die ganze Breite ---------- */
+.flaeche-papier { background: var(--papier); }
+.flaeche-salbei { background: var(--salbei-hell); }
+.flaeche-gruen { background: var(--waldgruen); color: var(--papier); }
+.flaeche-gruen h2 { color: var(--papier); }
+.flaeche-gruen a:focus-visible { outline-color: var(--sand); }
+.flaeche-papier, .flaeche-salbei { padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
 
-.button {
-  display: inline-block;
-  background: var(--akzent);
-  color: var(--akzent-text);
-  padding: 0.65rem 1.25rem;
-  border-radius: 0.4rem;
-  text-decoration: none;
+.zweispaltig {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+.zweispaltig h2 { margin-top: 0; }
+
+/* ---------- Unterseiten ---------- */
+.seitenkopf { padding-top: clamp(2.5rem, 6vw, 4.5rem); }
+.seitenkopf h1 { font-size: clamp(2.25rem, 4.5vw, 3.5rem); max-width: 20ch; margin: 0; }
+.seitenkopf.mit-bild {
+  display: grid; grid-template-columns: 1.2fr 0.8fr;
+  gap: clamp(2rem, 5vw, 4rem); align-items: end;
+}
+.seitenkopf figure { margin: 0; }
+.seitenkopf img {
+  width: 100%; aspect-ratio: 4 / 3.4; object-fit: cover;
+  border-radius: var(--ecke) var(--bogen) var(--ecke) var(--ecke);
+}
+.content { padding-top: clamp(1.5rem, 4vw, 3rem); padding-bottom: 4rem; }
+.content > * { max-width: var(--textbreite); }
+.content > h2:first-child { margin-top: 1rem; }
+
+/* ---------- Startseite: Einstieg ---------- */
+.einstieg {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+  padding-top: clamp(2.5rem, 7vw, 5.5rem);
+  padding-bottom: clamp(3rem, 7vw, 5.5rem);
+}
+.einstieg .einleitung { max-width: 38ch; }
+.klecks {
+  position: absolute; z-index: -1;
+  left: -9rem; top: -4rem; width: 20rem;
+}
+.einstieg-bild { position: relative; margin: 0; }
+.einstieg-bild img {
+  width: 100%;
+  aspect-ratio: 4 / 4.6;
+  object-fit: cover;
+  object-position: 50% 65%;
+  border-radius: 110px var(--ecke) var(--ecke) var(--ecke);
+}
+.einstieg-bild .linie {
+  position: absolute; right: -2.5rem; top: -2rem;
+  width: 11rem; color: var(--salbei);
+}
+.notiz {
+  position: absolute; left: -2rem; bottom: 2rem;
+  background: var(--sand);
+  color: var(--waldgruen);
+  font-family: var(--schrift-titel);
   font-weight: 600;
-}
-.button:hover { filter: brightness(1.1); }
-
-.hinweis {
-  background: var(--flaeche);
-  border-left: 4px solid var(--akzent);
-  padding: 0.75rem 1rem;
+  font-size: 1.3rem;
+  line-height: 1.25;
+  padding: 0.9rem 1.3rem;
+  border-radius: var(--ecke) 32px var(--ecke) var(--ecke);
 }
 
-/* Fußbereich */
+/* ---------- Startseite: Angebote ---------- */
+.angebote {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding-bottom: clamp(3.5rem, 8vw, 6.5rem);
+}
+.angebot {
+  padding: clamp(1.75rem, 3.5vw, 2.75rem);
+  display: flex; flex-direction: column; align-items: flex-start;
+}
+.angebot.salbei { background: var(--salbei-hell); border-radius: var(--ecke) var(--bogen) var(--ecke) var(--ecke); }
+.angebot.sand { background: var(--sand); border-radius: var(--ecke) var(--ecke) var(--bogen) var(--ecke); }
+.angebot h2 { margin: 0 0 1rem; font-size: clamp(1.75rem, 2.8vw, 2.25rem); }
+.angebot p { color: var(--text-weich); }
+.angebot .mehr { margin-top: auto; }
+
+/* ---------- Startseite: Schmerz-Grafik ---------- */
+.grafik { margin: 0; }
+.grafik-bild { position: relative; }
+.grafik svg { width: 100%; height: auto; display: block; }
+.marke {
+  position: absolute;
+  background: var(--papier);
+  font-size: 1rem; line-height: 1.35;
+  padding: 0.35rem 0.6rem;
+  max-width: 10rem;
+}
+.marke.m1 { top: 4%; left: 0; }
+.marke.m2 { top: 16%; right: 0; text-align: right; }
+.marke.m3 { bottom: 6%; left: 2%; }
+.marke.mitte {
+  top: 47%; left: 50%; transform: translate(-50%, -50%);
+  font-family: var(--schrift-titel); font-weight: 600;
+  font-size: 1.6rem; color: var(--waldgruen);
+  text-align: center; max-width: none; padding: 0.6rem 0.9rem;
+  hyphens: manual;
+}
+.grafik figcaption { font-size: 0.95rem; color: var(--moos); margin-top: 1rem; }
+
+/* ---------- Startseite: Termine ---------- */
+.termine-bereich { padding-top: clamp(3.5rem, 8vw, 6.5rem); padding-bottom: clamp(3.5rem, 8vw, 6.5rem); }
+.termine-bereich > h2 { margin-top: 0; }
+.termine-spalten {
+  display: grid; grid-template-columns: 1.3fr 0.7fr;
+  gap: 1.5rem clamp(2rem, 5vw, 4rem); align-items: start;
+}
+.termine-spalten h3 { margin-top: 0.5rem; }
+.termine { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
+.termin {
+  background: var(--sand);
+  border-radius: var(--ecke) 40px var(--ecke) var(--ecke);
+  padding: 1.5rem 1.75rem;
+}
+.termin h3 { margin: 0 0 0.75rem; font-size: 1.35rem; }
+.termin dl { margin: 0; display: grid; gap: 0.35rem; }
+.termin dl div { display: grid; grid-template-columns: 6.5rem 1fr; gap: 1rem; }
+.termin dt { font-size: 0.875rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--moos); padding-top: 0.2em; }
+.termin dd { margin: 0; }
+.beratung-termine {
+  background: var(--salbei-hell);
+  border-radius: var(--ecke) var(--ecke) var(--ecke) 40px;
+  padding: 1.5rem 1.75rem 1.75rem;
+}
+.beratung-termine .knoepfe { margin-top: 1rem; }
+
+.ermutigung { padding: clamp(3.5rem, 8vw, 5.5rem) 0; text-align: center; }
+.ermutigung h2 { margin: 0 auto 1rem; max-width: 22ch; }
+.ermutigung p { max-width: 36rem; margin-left: auto; margin-right: auto; }
+.ermutigung .knoepfe { justify-content: center; }
+
+/* ---------- Startseite: Über mich ---------- */
+.vorstellung {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+  padding-top: clamp(3.5rem, 8vw, 6.5rem);
+  padding-bottom: clamp(3.5rem, 8vw, 6.5rem);
+}
+.vorstellung figure { margin: 0; }
+.vorstellung img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: var(--ecke) var(--ecke) var(--ecke) 90px;
+}
+.vorstellung h2 { margin-top: 0; }
+.vorstellung p { max-width: 38rem; }
+
+/* ---------- Startseite: Häufige Fragen ---------- */
+.fragen { align-items: start; grid-template-columns: 0.75fr 1.25fr; }
+.faq { border-top: 1px solid var(--linie); }
+.faq details { border-bottom: 1px solid var(--linie); }
+.faq summary {
+  display: flex; justify-content: space-between; align-items: center; gap: 1.5rem;
+  padding: 1.1rem 0;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--waldgruen);
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-size: 1.6rem; font-weight: 400; line-height: 1; flex: none; }
+.faq details[open] summary::after { content: "–"; }
+.faq summary:focus-visible { outline: 3px solid var(--fokus); outline-offset: 3px; border-radius: var(--ecke); }
+.antwort { padding: 0 2rem 1.25rem 0; }
+.antwort p { margin: 0 0 0.8em; }
+
+/* ---------- Startseite: Kontakt ---------- */
+.kontakt { align-items: start; padding-top: clamp(3.5rem, 8vw, 6.5rem); padding-bottom: clamp(3.5rem, 8vw, 6.5rem); }
+.kontaktformular {
+  background: var(--papier);
+  border-radius: var(--bogen) var(--ecke) var(--ecke) var(--ecke);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
+}
+.kontaktformular label { display: block; font-weight: 600; margin: 0 0 0.4rem; }
+.kontaktformular select, .kontaktformular textarea {
+  display: block; width: 100%;
+  margin: 0 0 1.25rem;
+  font: inherit; font-size: 1.05rem; color: var(--tinte);
+  background: var(--papier);
+  border: 1px solid #7a8c7f;
+  border-radius: var(--ecke);
+  padding: 0.7rem 0.8rem;
+  min-height: 3rem;
+}
+.kontaktformular textarea { resize: vertical; min-height: 9rem; }
+.kontaktformular select:focus-visible, .kontaktformular textarea:focus-visible,
+.kontaktformular button:focus-visible { outline: 3px solid var(--fokus); outline-offset: 2px; }
+.kontaktformular .button { margin: 0.25rem 0 1rem; }
+.kontaktformular .leise { margin: 0 0 0.6rem; }
+
+/* ---------- Startseite: freier Text unten ---------- */
+.startseite-text { padding-top: 2rem; padding-bottom: 4rem; }
+.startseite-text > * { max-width: var(--textbreite); }
+
+/* ---------- Fußbereich ---------- */
 .site-footer {
   border-top: 1px solid var(--linie);
-  padding: 1.5rem 0;
-  font-size: 0.9rem;
-  color: var(--text-leise);
+  padding: 2rem 0;
+  font-size: 1rem;
+  color: var(--moos);
 }
 .footer-inner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: flex; flex-wrap: wrap;
+  justify-content: space-between; align-items: center;
   gap: 0.5rem 1.5rem;
 }
 .footer-inner p { margin: 0; }
+
+/* ---------- Mittlere Breite: Menü in eigene Zeile ---------- */
+@media (max-width: 1060px) {
+  .header-inner nav { order: 3; width: 100%; }
+}
+
+/* ---------- Handy und schmale Fenster ---------- */
+@media (max-width: 760px) {
+  :root { --bogen: 48px; }
+  .header-inner { gap: 0.25rem 1rem; }
+  .site-title { font-size: 1.3rem; }
+  .menu { gap: 0 1.25rem; }
+  .einstieg, .angebote, .vorstellung, .zweispaltig, .fragen,
+  .termine-spalten, .seitenkopf.mit-bild { grid-template-columns: 1fr; }
+  .einstieg-bild { margin-left: 1rem; }
+  .einstieg-bild img { border-top-left-radius: 80px; aspect-ratio: 4 / 4; }
+  .einstieg-bild .linie { right: -0.5rem; width: 8rem; }
+  .notiz { left: -1rem; font-size: 1.15rem; }
+  .klecks { width: 13rem; left: -8rem; }
+  .vorstellung figure { max-width: 22rem; }
+  .marke { font-size: 0.9rem; max-width: 8rem; }
+  .marke.mitte { font-size: 1.25rem; }
+  .termin dl div { grid-template-columns: 1fr; gap: 0; }
+  .ermutigung { text-align: left; }
+  .ermutigung h2, .ermutigung p { margin-left: 0; }
+  .ermutigung .knoepfe { justify-content: flex-start; }
+}
+
+/* Weniger Bewegung, wenn im Betriebssystem so eingestellt */
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; transition: none !important; }
+}
+
+/* Nachträge */
+.termine { margin-bottom: 1.25rem; }
+.termine-spalten .termine { margin-bottom: 0; }
+@media (max-width: 760px) {
+  .menu { gap: 0 1rem; font-size: 1rem; }
+}

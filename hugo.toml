@@ -45,6 +45,9 @@ disableKinds = ["taxonomy", "term", "rss"]
   # Buchungslinks zu pretix. Solange ein Link leer ist (""),
   # erscheint statt des Knopfes der Hinweis "Buchung bald möglich".
   [params.buchung]
+    # Knopf "Termin buchen" oben im Kopf jeder Seite (z. B. Ihre pretix-Startseite).
+    # Solange leer, führt der Knopf zu den Terminen auf der Startseite.
+    allgemein = ""
     beratung = ""
     kurs = ""
 

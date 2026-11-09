@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{- /* Sicherheitsregeln: keine fremden Inhalte, kein JavaScript, keine Formulare */}}
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'self'; form-action 'none'">
+  {{- /* Sicherheitsregeln: keine fremden Inhalte, kein JavaScript; Formulare dürfen nur das E-Mail-Programm öffnen (mailto) */}}
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'self'; form-action mailto:">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   {{- if site.Params.testversion }}
   <meta name="robots" content="noindex, nofollow">

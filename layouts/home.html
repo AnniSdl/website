@@ -1,6 +1,175 @@
+{{- /*
+  Startseite (lange Seite mit allen Abschnitten).
+  Die Texte stehen in content/_index.de.md und _index.en.md im Kopf
+  der Datei. Die Kurstermine kommen aus content/kurse.de.md / .en.md.
+  Reihenfolge: Einstieg – Angebote – Schmerz – Termine – Über mich –
+  Fragen – Kontakt.
+*/ -}}
 {{ define "main" }}
-<article class="wrap content">
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-</article>
+{{- $p := .Params }}
+
+{{- /* ===== 1 · EINSTIEG ===== */}}
+{{- with $p.einstieg }}
+<section class="wrap einstieg" aria-labelledby="titel">
+  <svg class="klecks" viewBox="0 0 300 300" aria-hidden="true" focusable="false">
+    <path d="M40 20C120-10 230 10 250 90s-40 120-120 150S-20 260 10 150 0 35 40 20Z" fill="#c9957c" opacity=".35"/>
+    <path d="M70 45C150 25 215 50 228 105" fill="none" stroke="#f7f4ee" stroke-width="3"/>
+  </svg>
+  <div>
+    {{- with .ueberzeile }}<p class="ueberzeile">{{ . }}</p>{{ end }}
+    <h1 id="titel">{{ .titel }}</h1>
+    {{- with .text }}<p class="einleitung">{{ . }}</p>{{ end }}
+    <p class="knoepfe">
+      {{- with .knopf }}<a class="button" href="{{ .ziel }}">{{ .text }}</a>{{ end }}
+      {{- with .knopf2 }}<a class="button hell" href="{{ .ziel }}">{{ .text }}</a>{{ end }}
+    </p>
+  </div>
+  {{- with .bild }}
+  <figure class="einstieg-bild">
+    <svg class="linie" viewBox="0 0 190 150" aria-hidden="true" focusable="false"><path d="M10 120C0 50 80 10 120 40s-30 90-70 70S50 20 180 15" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+    {{ partial "bild.html" (dict "datei" .datei "alt" .alt "groessen" "(max-width: 760px) 92vw, 36rem" "zuerst" true) }}
+    {{- with .notiz }}<figcaption class="notiz">{{ replace (htmlEscape .) ". " ".<br>" | safeHTML }}</figcaption>{{ end }}
+  </figure>
+  {{- end }}
+</section>
+{{- end }}
+
+{{- /* ===== 2 · ANGEBOTE ===== */}}
+{{- with $p.angebote }}
+<section class="wrap angebote" id="angebote" aria-label="{{ i18n "angebote" }}">
+  {{- range . }}
+  <article class="angebot {{ .farbe | default "salbei" }}">
+    {{- with .ueberzeile }}<p class="ueberzeile">{{ . }}</p>{{ end }}
+    <h2>{{ .titel }}</h2>
+    <p>{{ .text }}</p>
+    <a class="mehr" href="{{ relLangURL .ziel }}">{{ .linktext }}</a>
+  </article>
+  {{- end }}
+</section>
+{{- end }}
+
+{{- /* ===== 3 · WORUM ES GEHT (Schmerz ist real) ===== */}}
+{{- with $p.schmerz }}
+<section class="flaeche-papier" id="schmerz" aria-labelledby="schmerz-titel">
+  <div class="wrap zweispaltig">
+    <div>
+      {{- with .ueberzeile }}<p class="ueberzeile">{{ . }}</p>{{ end }}
+      <h2 id="schmerz-titel">{{ .titel }}</h2>
+      {{- with .text }}<div class="einleitung">{{ . | markdownify }}</div>{{ end }}
+      {{- with .hinweis }}<p class="leise">{{ . }}</p>{{ end }}
+    </div>
+    {{- with .grafik }}
+    <figure class="grafik">
+      <div class="grafik-bild">
+        <svg viewBox="0 0 540 430" aria-hidden="true" focusable="false">
+          <path d="M93 88C180 20 338 59 351 181S245 370 145 329 24 143 93 88Z" fill="#e3e9de"/>
+          <path d="M193 346C67 316 105 96 226 58S454 110 437 245 316 376 193 346Z" fill="#eee5d3" fill-opacity=".72"/>
+          <path d="M216 118C268 15 432 65 473 171S419 359 308 361 162 223 216 118Z" fill="none" stroke="#c9957c" stroke-width="1.4"/>
+          <path d="M82 203C131 109 266 82 357 136S420 291 330 327 146 310 110 268" fill="none" stroke="#536c5c" stroke-width="1.2"/>
+        </svg>
+        <span class="marke m1">{{ .koerper }}</span>
+        <span class="marke m2">{{ .wahrnehmung }}</span>
+        <span class="marke m3">{{ .gefuehle }}</span>
+        <span class="marke mitte">{{ .mitte }}</span>
+      </div>
+      {{- with .unterschrift }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+
+{{- /* ===== 4 · TERMINE UND ERMUTIGUNG ===== */}}
+{{- with $p.termine }}
+<section class="wrap termine-bereich" id="termine" aria-labelledby="termine-titel">
+  {{- with .ueberzeile }}<p class="ueberzeile">{{ . }}</p>{{ end }}
+  <h2 id="termine-titel">{{ .titel }}</h2>
+  <div class="termine-spalten">
+    <div>
+      {{- with .kurs_titel }}<h3>{{ . }}</h3>{{ end }}
+      {{- with site.GetPage "/kurse" }}{{ partial "termine.html" .Params.termine }}{{ end }}
+      <div class="knoepfe">{{ partial "buchungsknopf.html" "kurs" }}</div>
+    </div>
+    <div class="beratung-termine">
+      {{- with .beratung_titel }}<h3>{{ . }}</h3>{{ end }}
+      {{- with .beratung_text }}<p>{{ . }}</p>{{ end }}
+      <div class="knoepfe">{{ partial "buchungsknopf.html" "beratung" }}</div>
+    </div>
+  </div>
+</section>
+{{- with .ermutigung }}
+<section class="flaeche-gruen ermutigung" aria-labelledby="ermutigung-titel">
+  <div class="wrap">
+    <h2 id="ermutigung-titel">{{ .titel }}</h2>
+    {{- with .text }}<p>{{ . }}</p>{{ end }}
+    {{- with .knopf }}<p class="knoepfe"><a class="button papier" href="#kontakt">{{ . }}</a></p>{{ end }}
+  </div>
+</section>
+{{- end }}
+{{- end }}
+
+{{- /* ===== 5 · ÜBER MICH (kurz) ===== */}}
+{{- with $p.vorstellung }}
+<section class="wrap vorstellung" aria-labelledby="vorstellung-titel">
+  {{- with .bild }}
+  <figure>{{ partial "bild.html" (dict "datei" .datei "alt" .alt "groessen" "(max-width: 760px) 92vw, 28rem") }}</figure>
+  {{- end }}
+  <div>
+    {{- with .ueberzeile }}<p class="ueberzeile">{{ . }}</p>{{ end }}
+    <h2 id="vorstellung-titel">{{ .titel }}</h2>
+    {{- with .text }}<p>{{ . }}</p>{{ end }}
+    <p><a class="mehr" href="{{ relLangURL .ziel }}">{{ .linktext }}</a></p>
+  </div>
+</section>
+{{- end }}
+
+{{- /* ===== 6 · HÄUFIGE FRAGEN ===== */}}
+{{- with $p.fragen }}
+<section class="flaeche-salbei" id="fragen" aria-labelledby="fragen-titel">
+  <div class="wrap zweispaltig fragen">
+    <div>
+      {{- with .ueberzeile }}<p class="ueberzeile">{{ . }}</p>{{ end }}
+      <h2 id="fragen-titel">{{ .titel }}</h2>
+      {{- with .text }}<p>{{ . }}</p>{{ end }}
+    </div>
+    <div class="faq">
+      {{- range .liste }}
+      <details>
+        <summary>{{ .frage }}</summary>
+        <div class="antwort">{{ .antwort | markdownify }}</div>
+      </details>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}
+
+{{- /* ===== 7 · KONTAKT ===== */}}
+{{- with $p.kontakt }}
+<section class="wrap zweispaltig kontakt" id="kontakt" aria-labelledby="kontakt-titel">
+  <div>
+    {{- with .ueberzeile }}<p class="ueberzeile">{{ . }}</p>{{ end }}
+    <h2 id="kontakt-titel">{{ .titel }}</h2>
+    {{- with .text }}<p class="einleitung">{{ . }}</p>{{ end }}
+    {{- with .hinweis }}<p class="leise">{{ . }}</p>{{ end }}
+  </div>
+  <form class="kontaktformular" action="mailto:{{ site.Params.email }}" method="get">
+    <label for="thema">{{ i18n "form_thema" }}</label>
+    <select id="thema" name="subject">
+      {{- range .themen }}<option>{{ . }}</option>{{ end }}
+    </select>
+    <label for="nachricht">{{ i18n "form_nachricht" }}</label>
+    <textarea id="nachricht" name="body" rows="7"></textarea>
+    <button class="button" type="submit">{{ i18n "form_senden" }}</button>
+    <p class="leise">{{ i18n "form_erklaerung" }}</p>
+    <p class="leise">{{ i18n "form_direkt" }} <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
+  </form>
+</section>
+{{- end }}
+
+{{- with .Content }}
+<section class="wrap startseite-text">
+  {{ . }}
+</section>
+{{- end }}
 {{ end }}

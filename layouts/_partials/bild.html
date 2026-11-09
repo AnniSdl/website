@@ -1,0 +1,25 @@
+{{- /*
+  Gibt ein Foto aus assets/bilder/ verkleinert und im modernen
+  WebP-Format aus – in mehreren Größen, der Browser wählt die passende.
+  Aufruf: partial "bild.html" (dict "datei" "barfuss-wiese.jpg" "alt" "…" "groessen" "(max-width: 760px) 100vw, 45vw" "zuerst" true)
+  "zuerst" = Bild steht ganz oben und soll sofort laden.
+*/ -}}
+{{- $bild := resources.Get (printf "bilder/%s" .datei) }}
+{{- if not $bild }}{{ errorf "Bild nicht gefunden: assets/bilder/%s" .datei }}{{ end }}
+{{- $breiten := slice 480 800 (cond (lt $bild.Width 1200) $bild.Width 1200) }}
+{{- $set := slice }}
+{{- $standard := "" }}
+{{- range $breiten }}
+  {{- if le . $bild.Width }}
+    {{- $v := $bild.Resize (printf "%dx webp q78" .) }}
+    {{- $set = $set | append (printf "%s %dw" $v.RelPermalink .) }}
+    {{- $standard = $v }}
+  {{- end }}
+{{- end }}
+<img src="{{ $standard.RelPermalink }}"
+     srcset="{{ delimit $set ", " }}"
+     sizes="{{ .groessen | default "100vw" }}"
+     width="{{ $standard.Width }}" height="{{ $standard.Height }}"
+     alt="{{ .alt }}"
+     {{- if .zuerst }} fetchpriority="high"{{ else }} loading="lazy"{{ end }}
+     decoding="async">

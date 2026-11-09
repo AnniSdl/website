@@ -6,6 +6,9 @@ menus:
   main:
     name: "Counselling (PRT)"
     weight: 2
+bild:
+  datei: "hand-wasser.jpg"
+  alt: "A hand carefully touching the surface of water in the sunlight, reflected in it."
 ---
 
 ## What is Pain Reprocessing Therapy?

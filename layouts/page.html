@@ -1,6 +1,19 @@
+{{- /* Unterseiten (Beratung, Kurse, Über mich, Impressum …).
+     Steht im Kopf der Datei ein "bild:", erscheint es oben neben dem Titel. */ -}}
 {{ define "main" }}
-<article class="wrap content">
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+<article>
+  {{- with .Params.bild }}
+  <header class="wrap seitenkopf mit-bild">
+    <h1>{{ $.Title }}</h1>
+    <figure>{{ partial "bild.html" (dict "datei" .datei "alt" .alt "groessen" "(max-width: 760px) 92vw, 30rem" "zuerst" true) }}</figure>
+  </header>
+  {{- else }}
+  <header class="wrap seitenkopf">
+    <h1>{{ .Title }}</h1>
+  </header>
+  {{- end }}
+  <div class="wrap content">
+    {{ .Content }}
+  </div>
 </article>
 {{ end }}
