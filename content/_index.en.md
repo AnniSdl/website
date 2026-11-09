@@ -45,19 +45,20 @@ schmerz:
   titel: "Pain is real. How it comes about is complex."
   text: "With chronic pain, physical, emotional and contextual processes can interact. Which of them matter for you needs an individual look."
   hinweis: "A better understanding can offer orientation. It does not replace necessary medical assessment."
-  grafik:
-    koerper: "Physical processes"
-    wahrnehmung: "Perception & nervous system"
-    gefuehle: "Emotions & life context"
-    mitte: "Experience of pain"
-    unterschrift: "A schematic illustration of connections. It cannot be used to determine the cause of individual symptoms."
+  bild:
+    datei: "haende-licht.jpg"
+    alt: "Two hands resting against each other in warm evening light, dark grasses in the background."
 
 termine:
-  ueberzeile: "Dates"
-  titel: "When you can start"
-  kurs_titel: "Upcoming MBPM courses"
+  titel: "Dates"
   beratung_titel: "One-to-one counselling (PRT)"
-  beratung_text: "Every week I offer two online counselling sessions. You can book a free slot directly – or we can get to know each other briefly first."
+  beratung_gross: "Every week"
+  beratung_zeilen:
+    - name: "Format"
+      wert: "online via video, one-to-one"
+    - name: "Frequency"
+      wert: "two sessions per week"
+  beratung_text: "Book a free slot directly – or we can get to know each other briefly first."
   ermutigung:
     titel: "A first step can be a small one."
     text: "Not sure which offer suits you, or simply have a question? Write to me. Together we will see whether and how I can support you."

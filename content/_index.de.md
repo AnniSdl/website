@@ -52,20 +52,23 @@ schmerz:
   titel: "Schmerz ist real. Seine Zusammenhänge sind vielfältig."
   text: "Bei chronischen Schmerzen können körperliche, emotionale und kontextuelle Prozesse zusammenwirken. Welche davon für dich relevant sind, braucht einen individuellen Blick."
   hinweis: "Ein besseres Verständnis kann Orientierung geben. Es ersetzt keine notwendige medizinische Abklärung."
-  grafik:
-    koerper: "Körperliche Prozesse"
-    wahrnehmung: "Wahrnehmung & Nervensystem"
-    gefuehle: "Gefühle & Lebenskontext"
-    mitte: "Schmerz­erleben"
-    unterschrift: "Schematische Darstellung von Zusammenhängen. Daraus lässt sich keine Ursache für individuelle Beschwerden ableiten."
+  bild:
+    datei: "haende-licht.jpg"
+    alt: "Zwei Hände liegen im warmen Abendlicht aneinander, im Hintergrund dunkle Gräser."
 
 # ---------- 4 · Termine und Ermutigung ----------
 termine:
-  ueberzeile: "Termine"
-  titel: "Wann es losgehen kann"
-  kurs_titel: "Nächste MBPM-Kurse"
+  titel: "Termine"
+  # Linke Spalte: die Kurstermine kommen automatisch aus content/kurse.de.md
+  # Rechte Spalte: Einzelberatung
   beratung_titel: "Einzelberatung (PRT)"
-  beratung_text: "Jede Woche biete ich zwei Beratungstermine online an. Du buchst einen freien Termin direkt – oder wir lernen uns vorher kurz kennen."
+  beratung_gross: "Jede Woche"
+  beratung_zeilen:
+    - name: "Format"
+      wert: "online per Video, einzeln"
+    - name: "Rhythmus"
+      wert: "zwei Termine pro Woche"
+  beratung_text: "Buch direkt einen freien Termin – oder wir lernen uns vorher kurz kennen."
   ermutigung:
     titel: "Ein erster Schritt darf klein sein."
     text: "Du bist unsicher, welches Angebot zu dir passt, oder hast einfach eine Frage? Schreib mir. Gemeinsam schauen wir, ob und wie ich dich unterstützen kann."

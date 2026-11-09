@@ -50,7 +50,7 @@
 
 {{- /* ===== 3 · WORUM ES GEHT (Schmerz ist real) ===== */}}
 {{- with $p.schmerz }}
-<section class="flaeche-papier" id="schmerz" aria-labelledby="schmerz-titel">
+<section class="flaeche-salbei-dunkel" id="schmerz" aria-labelledby="schmerz-titel">
   <div class="wrap zweispaltig">
     <div>
       {{- with .ueberzeile }}<p class="ueberzeile">{{ . }}</p>{{ end }}
@@ -58,6 +58,9 @@
       {{- with .text }}<div class="einleitung">{{ . | markdownify }}</div>{{ end }}
       {{- with .hinweis }}<p class="leise">{{ . }}</p>{{ end }}
     </div>
+    {{- with .bild }}
+    <figure class="schmerz-bild">{{ partial "bild.html" (dict "datei" .datei "alt" .alt "groessen" "(max-width: 760px) 92vw, 36rem") }}</figure>
+    {{- else }}
     {{- with .grafik }}
     <figure class="grafik">
       <div class="grafik-bild">
@@ -75,25 +78,48 @@
       {{- with .unterschrift }}<figcaption>{{ . }}</figcaption>{{ end }}
     </figure>
     {{- end }}
+    {{- end }}
   </div>
 </section>
 {{- end }}
 
 {{- /* ===== 4 · TERMINE UND ERMUTIGUNG ===== */}}
 {{- with $p.termine }}
-<section class="wrap termine-bereich" id="termine" aria-labelledby="termine-titel">
-  {{- with .ueberzeile }}<p class="ueberzeile">{{ . }}</p>{{ end }}
-  <h2 id="termine-titel">{{ .titel }}</h2>
-  <div class="termine-spalten">
-    <div>
-      {{- with .kurs_titel }}<h3>{{ . }}</h3>{{ end }}
-      {{- with site.GetPage "/kurse" }}{{ partial "termine.html" .Params.termine }}{{ end }}
-      <div class="knoepfe">{{ partial "buchungsknopf.html" "kurs" }}</div>
-    </div>
-    <div class="beratung-termine">
-      {{- with .beratung_titel }}<h3>{{ . }}</h3>{{ end }}
-      {{- with .beratung_text }}<p>{{ . }}</p>{{ end }}
-      <div class="knoepfe">{{ partial "buchungsknopf.html" "beratung" }}</div>
+<section class="flaeche-ton" id="termine" aria-labelledby="termine-titel">
+  <div class="wrap termine-bereich">
+    <h2 id="termine-titel">{{ .titel }}</h2>
+    <div class="termin-spalten">
+      <div>
+        {{- $kurse := (site.GetPage "/kurse").Params.termine }}
+        {{- range $kurse }}
+        <div class="termin-block">
+          <h3>{{ .titel }}</h3>
+          {{- with .datum }}<p class="grosses-datum">{{ . }}</p>{{ end }}
+          <dl class="zeilen">
+            {{- with .zeit }}<div><dt>{{ i18n "termin_zeit" }}</dt><dd>{{ . }}</dd></div>{{ end }}
+            {{- with .ort }}<div><dt>{{ i18n "termin_ort" }}</dt><dd>{{ . }}</dd></div>{{ end }}
+            {{- with .umfang }}<div><dt>{{ i18n "termin_umfang" }}</dt><dd>{{ . }}</dd></div>{{ end }}
+            {{- with .preis }}<div><dt>{{ i18n "termin_preis" }}</dt><dd>{{ . }}</dd></div>{{ end }}
+          </dl>
+        </div>
+        {{- else }}
+        <p>{{ i18n "keine_termine" }}</p>
+        {{- end }}
+        <div class="knoepfe">{{ partial "buchungsknopf.html" "kurs" }}</div>
+      </div>
+      <div>
+        <div class="termin-block">
+          {{- with .beratung_titel }}<h3>{{ . }}</h3>{{ end }}
+          {{- with .beratung_gross }}<p class="grosses-datum">{{ . }}</p>{{ end }}
+          {{- with .beratung_zeilen }}
+          <dl class="zeilen">
+            {{- range . }}<div><dt>{{ .name }}</dt><dd>{{ .wert }}</dd></div>{{ end }}
+          </dl>
+          {{- end }}
+          {{- with .beratung_text }}<p class="nach-zeilen">{{ . }}</p>{{ end }}
+        </div>
+        <div class="knoepfe">{{ partial "buchungsknopf.html" "beratung" }}</div>
+      </div>
     </div>
   </div>
 </section>

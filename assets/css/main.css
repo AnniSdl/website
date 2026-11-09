@@ -61,6 +61,9 @@
   --sand: #eee5d3;         /* Flächen (Kurse) */
   --salbei-hell: #e3e9de;  /* Flächen (Beratung) */
   --salbei: #b6bfae;       /* nur Linien und Formen, nie Text */
+  --salbei-dunkel: #d7dccb;/* Fläche „Schmerz ist real“ */
+  --ton-flaeche: #e7c9b6;  /* Fläche „Termine“ (heller Rotton aus dem Prototyp) */
+  --tiefgruen: #13302c;    /* Schrift auf der Ton-Fläche */
   --ton: #c9957c;          /* nur Linien und Formen, nie Text */
   --fokus: #a04729;        /* Rahmen bei Tastaturbedienung */
   --linie: rgba(38, 60, 52, 0.14);
@@ -484,4 +487,42 @@ a:focus-visible, .button:focus-visible {
 .termine-spalten .termine { margin-bottom: 0; }
 @media (max-width: 760px) {
   .menu { gap: 0 1rem; font-size: 1rem; }
+}
+
+/* Farbflächen der Startseite */
+.flaeche-salbei-dunkel { background: var(--salbei-dunkel); padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
+.flaeche-salbei-dunkel .ueberzeile,
+.flaeche-salbei-dunkel .leise,
+.flaeche-salbei-dunkel figcaption { color: var(--text-weich); }
+.flaeche-ton { background: var(--ton-flaeche); color: var(--tiefgruen); }
+.flaeche-ton h2, .flaeche-ton h3 { color: var(--tiefgruen); }
+.flaeche-ton .termine-bereich > h2 { margin: 0 0 2.5rem; font-size: clamp(2.25rem, 4.5vw, 3.25rem); }
+.termin-spalten { display: grid; grid-template-columns: 1.2fr 0.8fr; }
+.termin-spalten > div:first-child { padding-right: clamp(2rem, 5vw, 4rem); }
+.termin-spalten > div + div { border-left: 1px solid rgba(19, 48, 44, 0.3); padding-left: clamp(2rem, 5vw, 4rem); }
+.termin-block + .termin-block { margin-top: 2.5rem; }
+.termin-block h3 { margin: 0 0 0.25rem; font-size: 1.15rem; letter-spacing: 0.02em; }
+.grosses-datum {
+  font-family: var(--schrift-titel); font-weight: 600;
+  font-size: clamp(1.75rem, 3vw, 2.4rem); line-height: 1.1; margin: 0;
+}
+.zeilen { margin: 1.25rem 0 0; display: grid; }
+.zeilen div { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; padding: 0.6rem 0; border-top: 1px solid rgba(19, 48, 44, 0.25); }
+.zeilen dt { font-size: 0.875rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding-top: 0.15em; }
+.zeilen dd { margin: 0; }
+.nach-zeilen { margin: 1rem 0 0; }
+.buchung-bald { margin: 0; font-style: normal; border-left: 3px solid currentColor; padding-left: 0.9rem; }
+.flaeche-ton .button.hell { color: var(--tiefgruen); border-color: var(--tiefgruen); }
+.flaeche-ton .button.hell:hover { background: rgba(255, 253, 248, 0.5); }
+@media (max-width: 760px) {
+  .termin-spalten { grid-template-columns: 1fr; }
+  .termin-spalten > div:first-child { padding-right: 0; }
+  .termin-spalten > div + div { border-left: 0; padding-left: 0; border-top: 1px solid rgba(19, 48, 44, 0.3); padding-top: 2rem; margin-top: 2.5rem; }
+  .zeilen div { grid-template-columns: 1fr; gap: 0; }
+}
+
+.schmerz-bild { margin: 0; }
+.schmerz-bild img {
+  width: 100%; aspect-ratio: 3 / 2; object-fit: cover;
+  border-radius: var(--ecke) var(--ecke) var(--bogen) var(--ecke);
 }
