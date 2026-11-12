@@ -104,6 +104,7 @@ Nicht verwenden: das Foto der meditierenden Frau aus dem Flyer (andere Person, S
 
 - Keine Heilerlaubnis → Angebote heißen **Beratung**, **Kurs**, **Prävention**, **Begleitung** – nicht Therapie/Behandlung/Heilung.
 - Keine Heilversprechen, keine Wirksamkeitszahlen aus Studien, keine Formulierungen wie „hilft nachweislich“ (Heilmittelwerbegesetz).
+- Studien dürfen genannt und verlinkt werden, damit sich Interessierte selbst informieren können. Dabei Ergebnisse sachlich und ohne Zahlen beschreiben, die untersuchte Gruppe nennen (z. B. „Menschen mit chronischen Rückenschmerzen“) und offen sagen, was noch nicht belegt ist. Nie den Eindruck erwecken, die eigene Beratung oder der Kurs habe dieselbe Wirkung.
 - Keine Erfahrungsberichte oder Zitate von Klient/innen.
 - Hinweis „ersetzt keine ärztliche oder psychotherapeutische Diagnose oder Behandlung“ auf Beratung, Kurse und in den Fragen.
 - ME/CFS: nur mit Hinweis auf Pacing und individuelle Grenzen; MBPM/PRT nicht als Heilung anbieten.
