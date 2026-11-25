@@ -1,6 +1,6 @@
 ---
 title: "Kurse in Mindfulness-Based Pain Management"
-description: "Achtsamkeitskurse nach Mindfulness-Based Pain Management (MBPM) – acht Wochen in einer kleinen Gruppe."
+description: "Achtsamkeitskurse nach Mindfulness-Based Pain Management (MBPM) – acht Wochen in einer festen Gruppe."
 slug: "kurse"
 menus:
   main:
@@ -18,42 +18,44 @@ bild:
 #  können Sie weglassen.
 # =====================================================================
 termine:
-  - titel: "MBPM-Kurs Winter 2027 · Hannover"
-    datum: "27. Januar bis 17. März 2027"
+  - titel: "MBPM-Kurs Frühjahr 2027 · Hannover"
+    datum: "7. April bis 2. Juni 2027 (kein Kurs am 19. Mai)"
     zeit: "mittwochs, 19:00–21:30 Uhr"
-    ort: "Common Grounds Yoga, Oeltzenstraße, Hannover (Calenberger Neustadt)"
+    ort: "BLOOM – Raum für Stimme, Kunst und Entfaltung, Voßstraße 11a, 30161 Hannover"
     umfang: "8 Abende à 2,5 Stunden"
-    preis: "350 Euro"
+    preis: "300–350 Euro (nach individueller Möglichkeit)"
 ---
 
-Acht Wochen, eine kleine Gruppe und ein rücksichtsvoller Rahmen: Im Kurs lernst du Achtsamkeit und Mitgefühl als Werkzeuge für den Alltag mit Schmerz und Belastung kennen.
+Mit Schmerzen zu leben kostet Kraft. Oft dreht sich vieles darum, den Schmerz endlich loszuwerden. In diesem Kurs hingegen geht es darum, wie du wieder in dein Leben zurückfinden kannst – Schritt für Schritt. In acht Wochen, in einer festen Gruppe und einem rücksichtsvollen Rahmen lernst du Achtsamkeit und Mitgefühl als Werkzeuge für deinen Alltag mit Schmerz und Belastung kennen.
 
 ## Was ist Mindfulness-Based Pain Management?
 
 Mindfulness-Based Pain Management (MBPM) wurde von Vidyamala Burch entwickelt. Sie lebt selbst seit vielen Jahren mit chronischen Schmerzen und gründete 2001 in Großbritannien die Organisation Breathworks, die den Kurs seitdem weiterentwickelt und Lehrende ausbildet.
 
-Der Kurs ist ähnlich aufgebaut wie das bekannte Achtsamkeitsprogramm MBSR. Er ist aber speziell auf Menschen zugeschnitten, die mit Schmerzen, Erkrankung oder Erschöpfung leben. MBPM verbindet Achtsamkeit und Mitgefühl mit Wissen aus der Schmerzforschung.
+Der Kurs ist ähnlich aufgebaut wie das bekannte Achtsamkeitsprogramm MBSR. Er ist aber speziell auf Menschen zugeschnitten, die mit Schmerzen, Erkrankung oder Erschöpfung leben. MBPM verbindet Achtsamkeit und Mitgefühl mit Wissen aus der aktuellen neurowissenschaftlichen Forschung.
+
+Ein Grundgedanke von MBPM ist die Unterscheidung zwischen zwei Ebenen: dem Symptom selbst und dem, was oft noch dazukommt – Anspannung, Sorgen, Grübeln und der innere Kampf dagegen. Diese zweite Ebene ist menschlich und verständlich, sie kann das Leiden aber zusätzlich verstärken. Im Kurs übst du, beide Ebenen achtsam wahrzunehmen und dem, was dazukommt, mit mehr Freundlichkeit zu begegnen.
 
 ## Was dich im Kurs erwartet
 
-- **Achtsamkeit:** den Körper, den Atem und Empfindungen freundlich und ohne Bewertung wahrnehmen
-- **Mitgefühl:** einen freundlicheren Umgang mit dir selbst üben – gerade in schweren Momenten
-- **Sanfte Bewegung:** achtsame Bewegungsübungen, angepasst an das, was dir heute möglich ist
-- **Pacing:** Aktivität und Ruhe so einteilen, dass du deine Kräfte gut einsetzen kannst
-- **Wissen:** verständlich aufbereitete Grundlagen über Schmerz und Nervensystem
-- **Austausch:** Erfahrungen teilen mit Menschen, die Ähnliches kennen
-- **Übungen für zu Hause:** geführte Meditationen zum Anhören, damit die Praxis in deinen Alltag findet
+- **Achtsamkeit:** Du nimmst den Körper, den Atem und Empfindungen freundlich und ohne Bewertung wahr
+- **Mitgefühl:** Du übst einen freundlicheren Umgang mit dir selbst – gerade in schweren Momenten
+- **Sanfte Bewegung:** Du machst achtsame Bewegungsübungen, angepasst an das, was dir heute möglich ist
+- **Pacing:** Du lernst, Aktivität und Ruhe so einzuteilen, dass du deine Kräfte gut einsetzen kannst
+- **Wissen:** Du bekommst verständlich aufbereitete Grundlagen über Schmerz und Nervensystem
+- **Austausch:** Du teilst Erfahrungen mit Menschen, die Ähnliches kennen
+- **Tägliche Praxis:** Du machst geführte Meditationen, damit die Praxis Eingang in deinen Alltag findet
 
 ## Aufbau des Kurses
 
 - **8 Kursabende** à 2,5 Stunden, einmal pro Woche
-- **Gruppengröße:** [PLATZHALTER: maximal … Personen]
+- **Gruppengröße:** 12 bis 15 Teilnehmende
 - **Kursunterlagen und Audios** für die Übungen zu Hause
-- **Kein Vorwissen nötig** – auch ohne Meditationserfahrung kannst du teilnehmen. [PLATZHALTER: bitte bestätigen]
+- **Kein Vorwissen nötig** – auch ohne Meditationserfahrung kannst du teilnehmen.
 
 ## Ein rücksichtsvoller Raum
 
-Es gibt keinen Leistungsdruck. Pausen und Positionswechsel sind jederzeit willkommen. Du kannst so sitzen oder dich bewegen, wie es dir guttut. Bei ME/CFS haben Pacing, deine individuellen Belastungsgrenzen und Selbstbestimmung Vorrang. Ob der Kursrahmen für dich passt, klären wir gern vorher in einem Gespräch.
+Es gibt keinen Leistungsdruck. Pausen und Positionswechsel sind jederzeit willkommen. Du kannst so sitzen oder dich bewegen, wie es dir guttut. Pacing, deine individuellen Belastungsgrenzen und Selbstbestimmung haben Vorrang. Ob der Kursrahmen für dich passt und was du brauchen könntest, um teilzunehmen, klären wir gern vorher in einem Gespräch.
 
 ## Für wen ist der Kurs gedacht?
 

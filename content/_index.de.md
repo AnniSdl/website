@@ -99,11 +99,11 @@ fragen:
     - frage: "Ist deine Beratung eine Psychotherapie?"
       antwort: "Nein. Ich biete Beratung und Prävention an, keine Psychotherapie und keine Heilbehandlung. Meine Angebote ersetzen keine ärztliche oder psychotherapeutische Diagnose oder Behandlung. Bitte lass deine Beschwerden ärztlich abklären."
     - frage: "Muss ich meditieren können?"
-      antwort: "[PLATZHALTER: Voraussetzungen für den Kurs]"
+      antwort: "Nein. Für den Kurs brauchst du kein Vorwissen und keine Meditationserfahrung."
     - frage: "Ist MBPM für Menschen mit ME/CFS geeignet?"
       antwort: "Eine Teilnahme muss zu deinen individuellen Belastungsgrenzen passen. Pacing, Pausen und Selbstbestimmung haben Vorrang. MBPM wird nicht als Heilung von ME/CFS angeboten. Ob der Kursrahmen für dich passt, klären wir am besten vorher in einem Gespräch."
     - frage: "Was kostet das?"
-      antwort: "Der MBPM-Kurs kostet 350 Euro pro Person. [PLATZHALTER: Preis der Einzelberatung]"
+      antwort: "Der MBPM-Kurs kostet 300–350 Euro, je nach individueller Möglichkeit. Eine Einzelberatung (50 Minuten, online) kostet 125–150 Euro nach Selbsteinschätzung (zzgl. MwSt). Das Kennenlerngespräch ist kostenlos."
 
 # ---------- 7 · Kontakt ----------
 kontakt:
