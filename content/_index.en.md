@@ -67,7 +67,7 @@ termine:
 vorstellung:
   ueberzeile: "About me"
   titel: "Personal experience. A caring perspective."
-  text: "I am trained in Mindfulness-Based Pain Management (MBPM) as taught by Vidyamala Burch and in Pain Reprocessing Therapy as taught by Dr Howard Schubiner. My own experience with chronic pain is part of my motivation."
+  text: "I am trained in Mindfulness-Based Pain Management (MBPM) as taught by Vidyamala Burch and in Pain Reprocessing Therapy as taught by Alan Gordon and Dr Howard Schubiner. My own experience with chronic pain is part of my motivation."
   linktext: "More about me"
   ziel: "/ueber-mich"
   bild:

@@ -78,7 +78,7 @@ termine:
 vorstellung:
   ueberzeile: "Über mich"
   titel: "Persönliche Erfahrung. Ein zugewandter Blick."
-  text: "Ich bin ausgebildet in Mindfulness-Based Pain Management (MBPM) nach Vidyamala Burch und in Pain Reprocessing Therapy nach Dr. Howard Schubiner. Meine eigene Erfahrung mit chronischen Schmerzen ist Teil meiner Motivation."
+  text: "Ich bin ausgebildet in Mindfulness-Based Pain Management (MBPM) nach Vidyamala Burch und in Pain Reprocessing Therapy nach Alan Gordon und Dr. Howard Schubiner. Meine eigene Erfahrung mit chronischen Schmerzen ist Teil meiner Motivation."
   linktext: "Mehr über mich"
   ziel: "/ueber-mich"
   bild:
