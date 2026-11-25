@@ -15,7 +15,7 @@ Chronische Schmerzen können das Leben auf den Kopf stellen. Sie greifen in den 
 
 ## Was ist Pain Reprocessing Therapy?
 
-Pain Reprocessing Therapy (PRT) wurde von dem US-amerikanischen Therapeuten [Alan Gordon](https://www.painreprocessingtherapy.com/meet-our-staff/) am Pain Psychology Center in Los Angeles entwickelt. Sie baut auf neurowissenschaftlichen Erkenntnissen auf, wie das Gehirn Schmerz verarbeitet und bewertet. Eine grundlegende Arbeit ist die [Boulder Back Pain Study](https://doi.org/10.1001/jamapsychiatry.2021.2669) der University of Colorado Boulder. Sie fand international viel Beachtung, weil zwei Drittel der Teilnehmer\*innen nach der PRT-Behandlung schmerzfrei oder fast schmerzfrei waren und diese Erholung auch ein Jahr später weiterhin anhielt. Hirnscans zeigten Veränderungen in Bereichen der Schmerzverarbeitung. Untersucht wurden chronische Rückenschmerzen ohne eindeutige körperliche Ursache.
+Pain Reprocessing Therapy (PRT) wurde von dem US-amerikanischen Therapeuten [Alan Gordon](https://www.painreprocessingtherapy.com/meet-our-staff/) am Pain Psychology Center in Los Angeles entwickelt. Sie baut auf neurowissenschaftlichen Erkenntnissen auf, wie das Gehirn Schmerz verarbeitet und bewertet. Eine grundlegende Arbeit ist die [Boulder Back Pain Study](https://doi.org/10.1001/jamapsychiatry.2021.2669) der University of Colorado Boulder, die international viel Beachtung fand. Untersucht wurden Menschen mit chronischen Rückenschmerzen ohne eindeutige körperliche Ursache. Viele Teilnehmende berichteten nach PRT von deutlich weniger Schmerzen als die Vergleichsgruppen, und dieser Unterschied war auch ein Jahr später noch zu sehen. Hirnscans zeigten Veränderungen in Bereichen der Schmerzverarbeitung. Das Pain Psychology Center wendet PRT inzwischen auch bei anderen anhaltenden Beschwerden an, etwa bei Erschöpfung, Schwindel oder Tinnitus. Wissenschaftlich am besten untersucht ist bisher der Einsatz bei Rückenschmerzen.
 
 An der Studie beteiligt war auch [Dr. Howard Schubiner](https://penguinrandomhouse.com/authors/2341011/howard-schubiner-md), Professor am College of Human Medicine der Michigan State University. Seit Jahrzehnten beschäftigt Schubiner sich mit Schmerzen, bei denen Nervensystem und Schmerzverarbeitung eine zentrale Rolle spielen. Er ist Autor mehrerer Bücher, darunter „Unlearn Your Pain“, sowie von Studien zu Rückenschmerzen und Fibromyalgie.
 
@@ -27,7 +27,7 @@ PRT geht davon aus, dass bei manchen chronischen Schmerzen das Gehirn und das Ne
 
 - **Verstehen:** Wir sprechen darüber, wie Schmerz entsteht und welche Rolle das Nervensystem dabei spielt.
 - **Hinweise sammeln:** Gemeinsam schauen wir, was in deinem Alltag zu diesem Verständnis passt – und was nicht.
-- **Somatic Tracking:** Du übst, körperliche Empfindungen achtsam und neugierig wahrzunehmen, mit einem Gefühl von Sicherheit und Neugier.
+- **Somatic Tracking:** Du übst, körperliche Empfindungen sicher, achtsam und neugierig wahrzunehmen.
 - **Belastungen einbeziehen:** Auch Stress, Druck und schwierige Gefühle können eine Rolle spielen. Wir schauen behutsam hin.
 - **Sicherheit stärken:** Angenehme Empfindungen, Selbstmitgefühl und Momente der Ruhe bekommen bewusst Raum.
 

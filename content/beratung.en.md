@@ -15,7 +15,7 @@ Chronic pain can turn your life upside down. It reaches into everyday life, into
 
 ## What is Pain Reprocessing Therapy?
 
-Pain Reprocessing Therapy (PRT) was developed by the US therapist [Alan Gordon](https://www.painreprocessingtherapy.com/meet-our-staff/) at the Pain Psychology Center in Los Angeles. It builds on neuroscientific findings about how the brain processes and evaluates pain. A key piece of research is the [Boulder Back Pain Study](https://doi.org/10.1001/jamapsychiatry.2021.2669) at the University of Colorado Boulder. It received international attention because two thirds of the participants were pain-free or nearly pain-free after PRT, and this recovery was still lasting a year later. Brain scans showed changes in areas involved in pain processing. The study looked at chronic back pain without a clear physical cause.
+Pain Reprocessing Therapy (PRT) was developed by the US therapist [Alan Gordon](https://www.painreprocessingtherapy.com/meet-our-staff/) at the Pain Psychology Center in Los Angeles. It builds on neuroscientific findings about how the brain processes and evaluates pain. A key piece of research is the [Boulder Back Pain Study](https://doi.org/10.1001/jamapsychiatry.2021.2669) at the University of Colorado Boulder, which received international attention. It looked at people with chronic back pain without a clear physical cause. Many participants reported considerably less pain after PRT than the comparison groups, and this difference was still visible a year later. Brain scans showed changes in areas involved in pain processing. The Pain Psychology Center now also uses PRT for other persistent symptoms, such as fatigue, dizziness or tinnitus. So far, its use for back pain has been studied best.
 
 [Dr Howard Schubiner](https://penguinrandomhouse.com/authors/2341011/howard-schubiner-md), Professor at the College of Human Medicine at Michigan State University, was also involved in the study. For decades, Schubiner has focused on pain in which the nervous system and pain processing play a central role. He is the author of several books, including "Unlearn Your Pain", and of studies on back pain and fibromyalgia.
 
@@ -27,7 +27,7 @@ PRT assumes that in some chronic pain conditions the brain and nervous system pl
 
 - **Understanding:** We talk about how pain arises and what role the nervous system plays.
 - **Gathering evidence:** Together we look at what in your everyday life fits this understanding – and what does not.
-- **Somatic tracking:** You practise noticing bodily sensations mindfully, with a sense of safety and curiosity.
+- **Somatic tracking:** You practise noticing bodily sensations safely, mindfully and with curiosity.
 - **Including stress:** Pressure and difficult emotions can also play a part. We look at them gently.
 - **Strengthening safety:** Pleasant sensations, self-compassion and moments of calm are given conscious space.
 
