@@ -86,11 +86,11 @@ fragen:
     - frage: "Is your counselling psychotherapy?"
       antwort: "No. I offer counselling and prevention, not psychotherapy or medical treatment. My services do not replace medical or psychotherapeutic diagnosis or treatment. Please have your symptoms checked by a doctor."
     - frage: "Do I need to know how to meditate?"
-      antwort: "[PLACEHOLDER: course requirements]"
+      antwort: "No. You do not need any previous knowledge or meditation experience for the course."
     - frage: "Is MBPM suitable for people with ME/CFS?"
       antwort: "Taking part has to fit your individual energy limits. Pacing, breaks and self-determination come first. MBPM is not offered as a cure for ME/CFS. We can best clarify beforehand in a conversation whether the course format suits you."
     - frage: "How much does it cost?"
-      antwort: "The MBPM course costs 350 euros per person. [PLACEHOLDER: price of counselling]"
+      antwort: "The MBPM course costs 300–350 euros, depending on your means. An individual counselling session (50 minutes, online) costs 125–150 euros on a sliding scale (plus VAT). The introductory call is free of charge."
 
 kontakt:
   ueberzeile: "Contact"
