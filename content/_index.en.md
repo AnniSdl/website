@@ -13,8 +13,8 @@ menus:
 
 einstieg:
   ueberzeile: "Counselling & courses for chronic pain"
-  titel: "More room to move in how you relate to pain."
-  text: "Chronic symptoms can take up a lot of space. I support you in exploring your own way of dealing with pain and stress – kindly, clearly and with respect for your limits."
+  titel: "More life. Even with pain."
+  text: "Chronic symptoms can take up a lot of space. I support people in exploring their own way of dealing with pain and stress – kindly, clearly and with respect for their own limits."
   knopf:
     text: "Get in touch"
     ziel: "#kontakt"
@@ -29,22 +29,22 @@ einstieg:
 angebote:
   - ueberzeile: "PRT · one-to-one, online"
     titel: "Understanding pain. Making room for new experiences."
-    text: "Counselling based on Pain Reprocessing Therapy. Together we look at whether this approach suits your situation."
+    text: "Support with Pain Reprocessing Therapy: grounded in neuroscience, mindful and caring."
     linktext: "More about counselling"
     ziel: "/beratung"
     farbe: "salbei"
   - ueberzeile: "MBPM · group course"
-    titel: "Paying attention. Being kind to yourself."
+    titel: "Mindful of the symptom, kind to yourself."
     text: "Mindfulness-Based Pain Management combines mindfulness and compassion with knowledge, practice and exchange."
     linktext: "More about the courses"
     ziel: "/kurse"
     farbe: "sand"
 
 schmerz:
-  ueberzeile: "A nuanced view of pain"
-  titel: "Pain is real. How it comes about is complex."
-  text: "With chronic pain, physical, emotional and contextual processes can interact. Which of them matter for you needs an individual look."
-  hinweis: "A better understanding can offer orientation. It does not replace necessary medical assessment."
+  ueberzeile: "A nuanced view of pain and chronic stress"
+  titel: "The symptoms are real, their connections complex."
+  text: "With chronic symptoms, physical, emotional and biographical processes can interact. Which of them matter for you needs an individual look. Together we look at how you can change the way you deal with them and find your way back into life."
+  hinweis: "This does not replace necessary medical assessment."
   bild:
     datei: "haende-licht.jpg"
     alt: "Two hands resting against each other in warm evening light, dark grasses in the background."
@@ -57,7 +57,7 @@ termine:
     - name: "Format"
       wert: "online via video, one-to-one"
     - name: "Frequency"
-      wert: "two sessions per week"
+      wert: "by arrangement"
   beratung_text: "Book a free slot directly – or we can get to know each other briefly first."
   ermutigung:
     titel: "A first step can be a small one."
@@ -80,7 +80,7 @@ fragen:
   text: "If your question is not answered here, feel free to write to me."
   liste:
     - frage: "What is Pain Reprocessing Therapy (PRT)?"
-      antwort: "PRT is an approach that takes into account how bodily sensations are interpreted and how threatening they are perceived to be in certain chronic pain conditions. Together we look at whether it suits your situation."
+      antwort: "PRT is an approach that starts with how bodily sensations are interpreted and how threatening they are perceived to be. The aim is to enable the brain to respond differently to the symptoms."
     - frage: "What is Mindfulness-Based Pain Management (MBPM)?"
       antwort: "MBPM combines mindfulness and compassion with practical exercises and dealing with pain in everyday life. My eight-week course also includes clearly explained knowledge and exchange."
     - frage: "Is your counselling psychotherapy?"

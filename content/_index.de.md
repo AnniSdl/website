@@ -18,8 +18,8 @@ menus:
 # ---------- 1 · Einstieg ganz oben ----------
 einstieg:
   ueberzeile: "Beratung & Kurse bei chronischen Schmerzen"
-  titel: "Mehr Spielraum im Umgang mit Schmerz."
-  text: "Chronische Beschwerden können viel Raum einnehmen. Ich begleite dich dabei, deinen eigenen Umgang mit Schmerz und Belastung zu erkunden – zugewandt, verständlich und mit Respekt für deine Grenzen."
+  titel: "Mehr Leben. Auch mit Schmerz."
+  text: "Chronische Beschwerden können viel Raum einnehmen. Ich begleite Menschen dabei, ihren eigenen Umgang mit Schmerz und Belastung zu erkunden – zugewandt, verständlich und mit Respekt für die eigenen Grenzen."
   knopf:
     text: "Kennenlernen anfragen"
     ziel: "#kontakt"
@@ -35,12 +35,12 @@ einstieg:
 angebote:
   - ueberzeile: "PRT · Einzelberatung online"
     titel: "Schmerz verstehen. Neue Erfahrungen ermöglichen."
-    text: "Beratung nach dem Ansatz der Pain Reprocessing Therapy. Gemeinsam schauen wir, ob dieser Zugang zu deiner Situation passt."
+    text: "Begleitung mit der Pain Reprocessing Therapy: neurowissenschaftlich fundiert, achtsam und zugewandt."
     linktext: "Mehr zur Beratung"
     ziel: "/beratung"
     farbe: "salbei"
   - ueberzeile: "MBPM · Kurs in der Gruppe"
-    titel: "Aufmerksam sein. Freundlich mit dir umgehen."
+    titel: "Achtsam mit dem Symptom, freundlich mit dir."
     text: "Mindfulness-Based Pain Management verbindet Achtsamkeit und Mitgefühl mit Wissen, Übungen und Austausch."
     linktext: "Mehr zu den Kursen"
     ziel: "/kurse"
@@ -48,10 +48,10 @@ angebote:
 
 # ---------- 3 · Worum es geht ----------
 schmerz:
-  ueberzeile: "Ein differenzierter Blick auf Schmerz"
-  titel: "Schmerz ist real. Seine Zusammenhänge sind vielfältig."
-  text: "Bei chronischen Schmerzen können körperliche, emotionale und kontextuelle Prozesse zusammenwirken. Welche davon für dich relevant sind, braucht einen individuellen Blick."
-  hinweis: "Ein besseres Verständnis kann Orientierung geben. Es ersetzt keine notwendige medizinische Abklärung."
+  ueberzeile: "Ein differenzierter Blick auf Schmerz und chronische Belastung"
+  titel: "Die Symptome sind real, ihre Zusammenhänge vielfältig."
+  text: "Bei chronischen Beschwerden können körperliche, emotionale und biografische Prozesse zusammenwirken. Welche davon für dich relevant sind, braucht einen individuellen Blick. Zusammen schauen wir, wie du deinen Umgang verändern und zurück ins Leben finden kannst."
+  hinweis: "Das ersetzt keine notwendige medizinische Abklärung."
   bild:
     datei: "haende-licht.jpg"
     alt: "Zwei Hände liegen im warmen Abendlicht aneinander, im Hintergrund dunkle Gräser."
@@ -67,7 +67,7 @@ termine:
     - name: "Format"
       wert: "online per Video, einzeln"
     - name: "Rhythmus"
-      wert: "zwei Termine pro Woche"
+      wert: "nach Vereinbarung"
   beratung_text: "Buch direkt einen freien Termin – oder wir lernen uns vorher kurz kennen."
   ermutigung:
     titel: "Ein erster Schritt darf klein sein."
@@ -93,7 +93,7 @@ fragen:
   text: "Wenn deine Frage hier offenbleibt, schreib mir gern."
   liste:
     - frage: "Was ist Pain Reprocessing Therapy (PRT)?"
-      antwort: "PRT ist ein Ansatz, der die Bewertung körperlicher Empfindungen und ihre wahrgenommene Bedrohlichkeit bei bestimmten chronischen Schmerzen einbezieht. Ob dieser Zugang zu deiner Situation passt, schauen wir gemeinsam an."
+      antwort: "PRT ist ein Ansatz, der bei der Bewertung körperlicher Empfindungen und ihrer wahrgenommenen Bedrohlichkeit ansetzt. Ziel ist, dem Gehirn einen anderen Umgang mit den Symptomen zu ermöglichen."
     - frage: "Was ist Mindfulness-Based Pain Management (MBPM)?"
       antwort: "MBPM verbindet Achtsamkeit und Mitgefühl mit praktischer Übung und dem Umgang mit Schmerz im Alltag. In meinem achtwöchigen Kurs gehören auch verständlich aufbereitetes Wissen und Austausch dazu."
     - frage: "Ist deine Beratung eine Psychotherapie?"
