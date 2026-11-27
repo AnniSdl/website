@@ -13,7 +13,7 @@ menus:
 
 einstieg:
   ueberzeile: "Counselling & courses for chronic pain"
-  titel: "More life. Even with pain."
+  titel: "More life. Less pain."
   text: "Chronic symptoms can take up a lot of space. I support people in exploring their own way of dealing with pain and stress – kindly, clearly and with respect for their own limits."
   knopf:
     text: "Get in touch"
@@ -28,13 +28,13 @@ einstieg:
 
 angebote:
   - ueberzeile: "PRT · one-to-one, online"
-    titel: "Understanding pain. Making room for new experiences."
+    titel: "Understanding pain – making room for new experiences"
     text: "Support with Pain Reprocessing Therapy: grounded in neuroscience, mindful and caring."
     linktext: "More about counselling"
     ziel: "/beratung"
     farbe: "salbei"
   - ueberzeile: "MBPM · group course"
-    titel: "Mindful of the symptom, kind to yourself."
+    titel: "Mindful of the symptom – kind to yourself"
     text: "Mindfulness-Based Pain Management combines mindfulness and compassion with knowledge, practice and exchange."
     linktext: "More about the courses"
     ziel: "/kurse"
@@ -44,7 +44,7 @@ schmerz:
   ueberzeile: "A nuanced view of pain and chronic stress"
   titel: "The symptoms are real, their connections complex."
   text: "With chronic symptoms, physical, emotional and biographical processes can interact. Which of them matter for you needs an individual look. Together we look at how you can change the way you deal with them and find your way back into life."
-  hinweis: "This does not replace necessary medical assessment."
+  hinweis: "My counselling does not replace necessary medical assessment."
   bild:
     datei: "haende-licht.jpg"
     alt: "Two hands resting against each other in warm evening light, dark grasses in the background."
@@ -80,9 +80,9 @@ fragen:
   text: "If your question is not answered here, feel free to write to me."
   liste:
     - frage: "What is Pain Reprocessing Therapy (PRT)?"
-      antwort: "PRT is an approach that starts with how bodily sensations are interpreted and how threatening they are perceived to be. The aim is to enable the brain to respond differently to the symptoms."
+      antwort: "PRT is an approach that starts with how bodily sensations are interpreted and how threatening they are perceived to be. The aim is to enable the brain to find a new way of dealing with the symptoms and to change how it processes them. It is based on the assumption that the sensation of pain is a conditioned response to a sensation that is actually not threatening. It develops and becomes entrenched through fear about the physical causes of the pain. The method of somatic tracking makes it possible to correct this misinterpretation."
     - frage: "What is Mindfulness-Based Pain Management (MBPM)?"
-      antwort: "MBPM combines mindfulness and compassion with practical exercises and dealing with pain in everyday life. My eight-week course also includes clearly explained knowledge and exchange."
+      antwort: "MBPM combines mindfulness and compassion with practical exercises and dealing with pain in everyday life. Here, too, the core is a new way of perceiving the symptom, through guided meditations and helpful knowledge about our nervous system. Participants also learn to use their own resources in everyday life in a way that makes new experiences possible. An individual pacing approach supports this. Finally, they share their experiences with others affected. This creates community and connection – and can reduce feelings of isolation and loneliness."
     - frage: "Is your counselling psychotherapy?"
       antwort: "No. I offer counselling and prevention, not psychotherapy or medical treatment. My services do not replace medical or psychotherapeutic diagnosis or treatment. Please have your symptoms checked by a doctor."
     - frage: "Do I need to know how to meditate?"

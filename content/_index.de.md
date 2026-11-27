@@ -18,7 +18,7 @@ menus:
 # ---------- 1 · Einstieg ganz oben ----------
 einstieg:
   ueberzeile: "Beratung & Kurse bei chronischen Schmerzen"
-  titel: "Mehr Leben. Auch mit Schmerz."
+  titel: "Mehr Leben. Weniger Schmerz."
   text: "Chronische Beschwerden können viel Raum einnehmen. Ich begleite Menschen dabei, ihren eigenen Umgang mit Schmerz und Belastung zu erkunden – zugewandt, verständlich und mit Respekt für die eigenen Grenzen."
   knopf:
     text: "Kennenlernen anfragen"
@@ -34,13 +34,13 @@ einstieg:
 # ---------- 2 · Die zwei Angebote ----------
 angebote:
   - ueberzeile: "PRT · Einzelberatung online"
-    titel: "Schmerz verstehen. Neue Erfahrungen ermöglichen."
+    titel: "Schmerz verstehen – neue Erfahrungen ermöglichen"
     text: "Begleitung mit der Pain Reprocessing Therapy: neurowissenschaftlich fundiert, achtsam und zugewandt."
     linktext: "Mehr zur Beratung"
     ziel: "/beratung"
     farbe: "salbei"
   - ueberzeile: "MBPM · Kurs in der Gruppe"
-    titel: "Achtsam mit dem Symptom, freundlich mit dir."
+    titel: "Achtsam mit dem Symptom – freundlich mit dir"
     text: "Mindfulness-Based Pain Management verbindet Achtsamkeit und Mitgefühl mit Wissen, Übungen und Austausch."
     linktext: "Mehr zu den Kursen"
     ziel: "/kurse"
@@ -51,7 +51,7 @@ schmerz:
   ueberzeile: "Ein differenzierter Blick auf Schmerz und chronische Belastung"
   titel: "Die Symptome sind real, ihre Zusammenhänge vielfältig."
   text: "Bei chronischen Beschwerden können körperliche, emotionale und biografische Prozesse zusammenwirken. Welche davon für dich relevant sind, braucht einen individuellen Blick. Zusammen schauen wir, wie du deinen Umgang verändern und zurück ins Leben finden kannst."
-  hinweis: "Das ersetzt keine notwendige medizinische Abklärung."
+  hinweis: "Meine Beratung ersetzt keine notwendige medizinische Abklärung."
   bild:
     datei: "haende-licht.jpg"
     alt: "Zwei Hände liegen im warmen Abendlicht aneinander, im Hintergrund dunkle Gräser."
@@ -93,9 +93,9 @@ fragen:
   text: "Wenn deine Frage hier offenbleibt, schreib mir gern."
   liste:
     - frage: "Was ist Pain Reprocessing Therapy (PRT)?"
-      antwort: "PRT ist ein Ansatz, der bei der Bewertung körperlicher Empfindungen und ihrer wahrgenommenen Bedrohlichkeit ansetzt. Ziel ist, dem Gehirn einen anderen Umgang mit den Symptomen zu ermöglichen."
+      antwort: "PRT ist ein Ansatz, der bei der Bewertung körperlicher Empfindungen und ihrer wahrgenommenen Bedrohlichkeit ansetzt. Ziel ist, dem Gehirn einen neuen Umgang mit den Symptomen zu ermöglichen und dessen Verarbeitung zu verändern. Grundlage dafür ist die Annahme, dass die Schmerzempfindung eine konditionierte Antwort auf eine eigentlich unbedrohliche Empfindung ist. Sie entsteht und verfestigt sich durch die Angst vor den körperlichen Ursachen des Schmerzes. Die Methode des Somatic Tracking ermöglicht, diese Fehlinterpretation zu korrigieren."
     - frage: "Was ist Mindfulness-Based Pain Management (MBPM)?"
-      antwort: "MBPM verbindet Achtsamkeit und Mitgefühl mit praktischer Übung und dem Umgang mit Schmerz im Alltag. In meinem achtwöchigen Kurs gehören auch verständlich aufbereitetes Wissen und Austausch dazu."
+      antwort: "MBPM verbindet Achtsamkeit und Mitgefühl mit praktischer Übung und dem Umgang mit Schmerz im Alltag. Auch hier ist das Kernstück eine neue Wahrnehmung des Symptoms durch geführte Meditationen und hilfreiches Wissen über unser Nervensystem. Teilnehmende lernen dabei auch, im Alltag so mit eigenen Ressourcen umzugehen, dass neue Erfahrungen möglich werden. Dazu dient ein individueller Pacing-Ansatz. Schließlich teilen sie ihre Erfahrungen mit anderen Betroffenen. Das schafft Gemeinschaft und Verbindung – und kann Gefühle von Isolation und Einsamkeit verringern."
     - frage: "Ist deine Beratung eine Psychotherapie?"
       antwort: "Nein. Ich biete Beratung und Prävention an, keine Psychotherapie und keine Heilbehandlung. Meine Angebote ersetzen keine ärztliche oder psychotherapeutische Diagnose oder Behandlung. Bitte lass deine Beschwerden ärztlich abklären."
     - frage: "Muss ich meditieren können?"
